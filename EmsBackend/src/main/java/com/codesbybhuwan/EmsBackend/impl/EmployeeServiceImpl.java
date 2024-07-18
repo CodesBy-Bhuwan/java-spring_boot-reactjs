@@ -2,6 +2,7 @@ package com.codesbybhuwan.EmsBackend.impl;
 
 import com.codesbybhuwan.EmsBackend.dto.EmployeeDto;
 import com.codesbybhuwan.EmsBackend.entities.Employee;
+import com.codesbybhuwan.EmsBackend.exception.ResourseNotFoundException;
 import com.codesbybhuwan.EmsBackend.mapper.EmployeeMapper;
 import com.codesbybhuwan.EmsBackend.repo.EmpolyeeRepo;
 import com.codesbybhuwan.EmsBackend.services.EmployeeService;
@@ -29,7 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeDto getEmployeeById(Long employeeId) {
 
         Employee employee = employeeRepo.findById(employeeId)
-                .orElseThrow(()-> new exeption("Employee doesn't exist with given Id : "+ employeeId));
+                .orElseThrow(()-> new ResourseNotFoundException("Employee doesn't exist with given Id : "+ employeeId));
 
 
         return EmployeeMapper.mapToEmployeeDto(employee);
