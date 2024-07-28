@@ -1,7 +1,20 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import { listEmployees } from '../services/EmployeeService'
 
 const ListOfEmployee = () => {
 
+    const [employees, setEmployees] = useState([])
+
+    useEffect(()=> {
+        listEmployees().then((response)=>{
+            setEmployees(response.data);
+        }).catch(error => {
+            console.error(error);
+        })
+    }, [])
+
+
+    {/*
     const dummyDbms = [
         {
             "id":1,
@@ -67,6 +80,7 @@ const ListOfEmployee = () => {
             "email":"r9am@gmail.com"
         },
     ]
+    */}
 
   return (
     <div className='container'>
@@ -83,7 +97,7 @@ const ListOfEmployee = () => {
         </thead>
         <tbody>
             {
-                dummyDbms.map(employee =>
+                employees.map(employee =>
                 <tr key={employee.id}>
                     <td>{employee.id}</td>
                     <td>{employee.firstName}</td>
