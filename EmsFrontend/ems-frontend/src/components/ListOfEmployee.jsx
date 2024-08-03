@@ -12,8 +12,6 @@ const ListOfEmployee = () => {
             console.error(error);
         })
     }, [])
-
-
     {/*
     const dummyDbms = [
         {
@@ -85,6 +83,10 @@ const ListOfEmployee = () => {
   return (
     <div className='container'>
     <h2 className='text-center'>List of Employees</h2>
+
+    {/* Phase -2 Adding buttons for AddEmployeeee */}
+    <button type="button" class="btn btn-primary btn-sm">Add Emplooyee</button>
+
     <table className='table table-striped table-bordered'>
         <thead>
             <tr>

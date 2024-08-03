@@ -14,11 +14,9 @@ function App() {
       <HeaderComponent />
       <Routes>
         {/* This is when we click on link for like: http://localhost:3000 */}
-        <Route path="/" element={ <ListOfEmployee />} >
+        <Route path="/" element={ <ListOfEmployee />} > </Route>
         {/* Similarly for other paths we do the same difference is assign the path */}
-        <Route path="/employees" element {<ListOfEmployee />}></Route>
-
-        </Route>
+        <Route path="/employees" element={<ListOfEmployee />}></Route>
       </Routes>
       <FooterComponent />
       </BrowserRouter>
