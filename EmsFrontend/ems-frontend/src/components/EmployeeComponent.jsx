@@ -6,7 +6,7 @@ const EmployeeComponent = () => {
   const[firstName, setFirstName] = useState('')
   const[lastName, setLastName] = useState('')
   const[email, setEmail] = useState('')
-  const[address, setAddress] = useState('')  
+  const[address, setAddress] = useState('')
 
   return (
     // Step 2: Adding container
@@ -15,7 +15,7 @@ const EmployeeComponent = () => {
           <div className="card">
             <h2 className='text-center'>Add Employee</h2>
             <div className="card-body">
-              <form >
+              <form>
                 <div className="form-group mb-2">
                   <label className='form-label'>First Name</label>
                   <input 
@@ -28,7 +28,6 @@ const EmployeeComponent = () => {
                 </div>
               </form>
             </div>
-
           </div>
         </div>
     </div>

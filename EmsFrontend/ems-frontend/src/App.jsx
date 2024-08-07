@@ -19,7 +19,7 @@ function App() {
         {/* Similarly for other paths we do the same difference is assign the path */}
         <Route path="/employees" element={<ListOfEmployee />}></Route>
         {/* path and navigate has to be same since this shows the actual path relation */}
-        <Route path="/add-employee" element = {EmployeeComponent}></Route>
+        <Route path="/add-employee" element = {<EmployeeComponent />}></Route>
       </Routes>
       <FooterComponent />
       </BrowserRouter>
